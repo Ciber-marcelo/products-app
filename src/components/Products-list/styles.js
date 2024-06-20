@@ -11,17 +11,13 @@ export const Main = styled.div`
 export const Div = styled.div`
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   width: auto;
-   max-width: 830px;
    gap: 0.5rem;
 `;
 
 export const ContainerProducts = styled.div`
    display: flex;
-   padding: 0.5rem;
    gap: 0.5rem;
+   padding: 0.5rem;
    border-radius: 0.5rem;
    background-color: blue;
 
@@ -33,20 +29,21 @@ export const ContainerProducts = styled.div`
 export const DivProduct = styled.div`
    display: flex;
    justify-content: center;
-   border-radius: 0.5rem;
+   width: 240px;
    padding: 0.5rem;
-   width: 250px;
+   box-sizing: border-box;
+   border-radius: 0.5rem;
    background-color: white;
    font-weight: bold;
 `;
 
 export const Input = styled.input`
    width: 100%;
-   max-width: 300px;
-   box-sizing: border-box;
-   border: 2px solid blue;
-   border-radius: 0.5rem;
+   max-width: 256px;
    padding: 0.5rem;
+   box-sizing: border-box;
+   border: 3px solid blue;
+   border-radius: 0.5rem;
 `;
 
 export const DivButtons = styled.div`
@@ -54,21 +51,21 @@ export const DivButtons = styled.div`
    justify-content: center;
    flex-wrap: wrap;
    gap: 0.5rem;
-   width: auto;
-   max-width: 830px;
+   width: 100%;
+   max-width: 752px;
 
    @media (max-width: 900px) {
-      max-width: 282px;
+      max-width: 256px;
    }
 `;
 
 export const ButtonCategory = styled.button`
    display: flex;
    justify-content: center;
-   width: 120px;
+   width: 110px;
+   padding: 0.5rem;
    border: none;
    border-radius: 0.5rem;
-   padding: 0.5rem;
    background-color: ${props => props.$isClicked ? 'blue' : 'gray'};
    color: white;
 `;
@@ -76,12 +73,12 @@ export const ButtonCategory = styled.button`
 export const ButtonSort = styled.button`
    display: flex;
    justify-content: center;
-   width: 120px;
+   width: 110px;
+   padding: 0.5rem;
    border: 2xp solid gray;
    border-radius: 0.5rem;
-   padding: 0.5rem;
-   color: white;
    background-color: ${props => props.$isSorted ? 'blue' : 'none'};
+   color: white;
    color: ${props => props.$isSorted ? 'white' : 'black'};
 `;
 

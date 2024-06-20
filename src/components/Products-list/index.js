@@ -3,7 +3,7 @@ import { Main, Input, DivButtons, ButtonCategory, ButtonSort, Div, ContainerProd
 import { produtos } from "../../assets/products"
 import { useState } from "react";
 
-export default function ProductList() {
+export default function ProductsList() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
   const [isClicked, setIsClicked] = useState(null);
@@ -12,14 +12,14 @@ export default function ProductList() {
   const [isEmpty, setIsEmpty] = useState(false);
   const divRef = useRef(null);
 
-  //Aqui estou utilizando o useEffect para verificar se div pai da lista está vazia ou não
+  //estou utilizando o 'useEffect' para verificar se a 'div' está vazia ou não
   useEffect(() => {
     if (divRef.current && divRef.current.innerHTML.trim() === '') {
       setIsEmpty(true);
     } else {
       setIsEmpty(false);
     }
-  }, [search]);
+  }, [search, isClicked]);
 
 
   //função para filtrar a lista de produtos pela categoria
